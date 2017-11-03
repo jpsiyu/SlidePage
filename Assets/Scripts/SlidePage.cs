@@ -11,7 +11,7 @@ public class SlidePage : MonoBehaviour, IBeginDragHandler, IEndDragHandler {
     private Button btnLeft;
     private Button btnRight;
     private Transform content;
-    private const float check = 0.01f;
+    private const float check = 0.001f;
 
     private float smoothSpeed = 1.0f;
     private const float SMOOTH_TIME = 0.2f;
