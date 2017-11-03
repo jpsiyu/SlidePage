@@ -116,6 +116,7 @@ public class SlidePage : MonoBehaviour, IBeginDragHandler, IEndDragHandler {
         }
 
         float normalizeValue = scrollRect.normalizedPosition.x;
+        normalizeValue = Mathf.Clamp(normalizeValue, 0f, 1f);
         d = 1.0f / (content.childCount - 1);
         low =(int) Mathf.Floor(normalizeValue / d);
         high = low + 1;
@@ -129,7 +130,7 @@ public class SlidePage : MonoBehaviour, IBeginDragHandler, IEndDragHandler {
     private void OnBtnClick(EDirection dir) {
         int curIndex = GetFocusIndex();
         int next = dir == EDirection.Left ? curIndex - 1 : curIndex + 1;
-        next = Mathf.Clamp(next, 0, content.childCount);
+        next = Mathf.Clamp(next, 0, content.childCount-1);
         FocusIndex(next);
     }
 
