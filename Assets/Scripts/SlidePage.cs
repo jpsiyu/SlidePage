@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
 
-public class TurningPage : MonoBehaviour, IBeginDragHandler, IEndDragHandler {
+public class SlidePage : MonoBehaviour, IBeginDragHandler, IEndDragHandler {
 
     private ScrollRect scrollRect;
     private Button btnLeft;
