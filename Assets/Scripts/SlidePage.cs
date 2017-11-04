@@ -118,7 +118,7 @@ public class SlidePage : MonoBehaviour, IBeginDragHandler, IEndDragHandler {
         float normalizeValue = scrollRect.normalizedPosition.x;
         normalizeValue = Mathf.Clamp(normalizeValue, 0f, 1f);
         d = 1.0f / (content.childCount - 1);
-        low = Mathf.RoundToInt(Mathf.Floor(normalizeValue / d));
+        low = Mathf.RoundToInt(normalizeValue / d);
         high = low + 1;
     }
 
